@@ -38,7 +38,7 @@ import com.ruoyi.generator.service.IGenTableService;
 /**
  * 代码生成 操作处理
  * 
- * @author ruoyi
+ * @author
  */
 @RestController
 @RequestMapping("/tool/gen")
@@ -130,9 +130,13 @@ public class GenController extends BaseController
     {
         try
         {
-            sql = "CREATE TABLE user_sport (\n" +
+            sql = "CREATE TABLE users (\n" +
                     "    id INT AUTO_INCREMENT PRIMARY KEY,\n" +
-                    "    username VARCHAR(50) NOT NULL UNIQUE\n" +
+                    "    username VARCHAR(50) NOT NULL UNIQUE,\n" +
+                    "    email VARCHAR(100) NOT NULL UNIQUE,\n" +
+                    "    password_hash VARCHAR(255) NOT NULL,\n" +
+                    "    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n" +
+                    "    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP\n" +
                     ");";
            // SqlUtil.filterKeyword(sql);
             List<SQLStatement> sqlStatements = SQLUtils.parseStatements(sql, DbType.mysql);

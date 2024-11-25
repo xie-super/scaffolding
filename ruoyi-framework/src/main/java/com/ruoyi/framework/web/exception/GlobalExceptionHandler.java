@@ -22,7 +22,7 @@ import com.ruoyi.common.utils.html.EscapeUtil;
 /**
  * 全局异常处理器
  * 
- * @author ruoyi
+ * @author
  */
 @RestControllerAdvice
 public class GlobalExceptionHandler
