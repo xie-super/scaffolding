@@ -130,13 +130,14 @@ public class GenController extends BaseController
     {
         try
         {
-            sql = "CREATE TABLE users (\n" +
+            sql = "CREATE TABLE posts (\n" +
                     "    id INT AUTO_INCREMENT PRIMARY KEY,\n" +
-                    "    username VARCHAR(50) NOT NULL UNIQUE,\n" +
-                    "    email VARCHAR(100) NOT NULL UNIQUE,\n" +
-                    "    password_hash VARCHAR(255) NOT NULL,\n" +
+                    "    title VARCHAR(255) NOT NULL,\n" +
+                    "    content TEXT NOT NULL,\n" +
+                    "    user_id INT NOT NULL,\n" +
                     "    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n" +
-                    "    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP\n" +
+                    "    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n" +
+                    "    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE\n" +
                     ");";
            // SqlUtil.filterKeyword(sql);
             List<SQLStatement> sqlStatements = SQLUtils.parseStatements(sql, DbType.mysql);

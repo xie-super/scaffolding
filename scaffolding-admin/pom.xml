@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <packaging>jar</packaging>
-    <artifactId>ruoyi-admin</artifactId>
+    <artifactId>scaffolding-admin</artifactId>
 
     <description>
         web服务入口
@@ -46,19 +46,19 @@
         <!-- 核心模块-->
         <dependency>
             <groupId>com.ruoyi</groupId>
-            <artifactId>ruoyi-framework</artifactId>
+            <artifactId>scaffolding-framework</artifactId>
         </dependency>
 
         <!-- 定时任务-->
         <dependency>
             <groupId>com.ruoyi</groupId>
-            <artifactId>ruoyi-quartz</artifactId>
+            <artifactId>scaffolding-quartz</artifactId>
         </dependency>
 
         <!-- 代码生成-->
         <dependency>
             <groupId>com.ruoyi</groupId>
-            <artifactId>ruoyi-generator</artifactId>
+            <artifactId>scaffolding-generator</artifactId>
         </dependency>
 
     </dependencies>
