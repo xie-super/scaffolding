@@ -374,6 +374,7 @@ public class GenTableServiceImpl implements IGenTableService
 
         VelocityInitializer.initVelocity();
 
+        //参数获取
         VelocityContext context = VelocityUtils.prepareContext(table);
 
         // 获取模板列表
