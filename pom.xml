@@ -10,6 +10,12 @@
 
     <name>ruoyi</name>
     <url>http://www.ruoyi.vip</url>
+    <dependencies>
+        <dependency>
+            <groupId>com.ruoyi</groupId>
+            <artifactId>scaffolding-common</artifactId>
+        </dependency>
+    </dependencies>
     <description>脚手架</description>
     
     <properties>
