@@ -229,6 +229,7 @@
         <module>scaffolding-generator</module>
         <module>scaffolding-common</module>
         <module>scaffolding-dal</module>
+        <module>scaffolding-infrastructure</module>
     </modules>
     <packaging>pom</packaging>
 
