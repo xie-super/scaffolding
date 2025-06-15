@@ -5,7 +5,6 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-import com.scaffolding.common.constant.CacheConstants;
 import com.scaffolding.common.enums.LimitType;
 
 /**
@@ -21,7 +20,6 @@ public @interface RateLimiter
     /**
      * 限流key
      */
-    public String key() default CacheConstants.RATE_LIMIT_KEY;
 
     /**
      * 限流时间,单位秒
